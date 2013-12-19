@@ -344,7 +344,7 @@ Find.find(path.to_s) do |filename|
 			begin 
 			  episode.fix_name! if fixnames
 			rescue
-        puts "Error: " + $! 
+        puts "Error: " + $!.to_s 
       end
 		else 
 			puts "no data found for #{filename}" 
