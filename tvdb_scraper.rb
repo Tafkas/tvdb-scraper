@@ -247,7 +247,7 @@ def get_details(file, refresh)
 			season, episode_number = $1.to_s, $2.to_s
 		else 	
 			# the simple case 
-			episode_number = /\d+/.match(file.basename)[0]
+			episode_number = /\d+/.match(file.basename.to_s)[0]
 			if episode_number.to_i > 99 && episode_number.to_i < 1900 
 				# handle the format 308 (season, episode) with special exclusion to year names Eg. 2000 1995
 				season = episode_number[0,episode_number.length-2]
